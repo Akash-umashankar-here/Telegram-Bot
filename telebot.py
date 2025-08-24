@@ -28,16 +28,5 @@ def main(message):
             asyncio.sleep(5)
 
 if __name__ == '__main__':
-    print("starting bot...\n1. staff in class\n2. staff not in class\n3. substituition in class\n4. substituition not in class\n")
-    choice=int(input("Enter the number: "))
-    if choice==1:
-        message="in class (staff)"
-    elif choice==2:
-        message="not in class (staff)"
-    elif choice==3:
-        message="in class (substitution)"
-    elif choice==4:
-        message="not in class (substitution)"
-    else:
-        print("invalid entry")
+  message = "hi"
     asyncio.run(main(message))
