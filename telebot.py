@@ -1,10 +1,11 @@
+import os
 from telegram import Update
 import asyncio
 from datetime import datetime
 from telegram.ext import ApplicationBuilder,CommandHandler,ContextTypes
 from telegram.error import TimedOut
 now=datetime.now()
-Token = ""
+Token = os.getenv("TOKEN")
 async def start (update:Update,context:ContextTypes.DEFAULT_TYPE):
   await  update.message.reply_text("Hello")
 async def help(update:Update,context:ContextTypes.DEFAULT_TYPE):
@@ -30,4 +31,5 @@ def main(message):
 if __name__ == '__main__':
   message = "hi"
   asyncio.run(main(message))
+
 
